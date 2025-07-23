@@ -4,6 +4,7 @@ const priceEL = document.getElementById("price");
 const salesAgeEl = document.getElementById("salesAge");
 const trainCarriageEl = document.getElementById("trainCarriage");
 const cancelBtnEl = document.getElementById("cancelBtn");
+const addPassengerEl = document.getElementById("addPassenger");
 const priceKm = 0.21;
 const under18 = 0.80;
 const over65 = 0.60;
