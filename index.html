@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Biglietto del treno</title>
+</head>
+
+<body
+    style="background-image: url(./img/viaggio-treni-panoramici-glacier-express-scaled-e1619113068822.jpg); background-repeat: no-repeat; background-size: cover;">
+    <div class="container p-3 mt-5 bg-light bg-opacity-75">
+        <h1 class="text-center pb-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="row">
+            <form class="d-flex flex-wrap justify-content-center">
+                <div class="col-4 mb-3 px-2">
+                    <label for="exampleFormControlInput1" class="form-label">Nome e Cognome</label>
+                    <input id="name-field" type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Inserisci Nome e Cognome">
+                </div>
+                <div class="col-4 mb-3 px-2">
+                    <label for="exampleFormControlInput1" class="form-label">Chilometri da percorrere</label>
+                    <input id="km-field" type="number" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Inserisci chilometri da percorrere" required>
+                </div>
+                <div class="col-4 px-2">
+                    <label for="exampleFormControlInput1" class="form-label">Fascia d'età</label>
+                    <select id="ageSelector" class="form-select" aria-label="Default select example">
+                        <option value="">Seleziona fascia</option>
+                        <option value="under18">Minorenne</option>
+                        <option value="over65">Over 65</option>
+                        <option value="standard">Standard</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mx-3">Accetta</button>
+                <button id="cancelBtn" type="button" class="btn btn-primary mx-3 ">Annulla</button>
+            </form>
+        </div>
+        <h2 class="text-center py-5 fs-1">IL TUO BIGLIETTO</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">DETTAGLIO PASSEGGERI</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="col-4" scope="col">Nome e Cognome</th>
+                            <th class="col-3" scope="col">Offerta</th>
+                            <th class="col-3" scope="col">Numero carrozza</th>
+                            <th class="col-2" scope="col">Prezzo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th id="names" scope="row"></th>
+                            <td id="salesAge"></td>
+                            <td id="trainCarriage"></td>
+                            <td id="price"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
